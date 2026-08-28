@@ -5,20 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Préstamos | Maycoop Cooperativa</title>
 
-    <!-- Fuentes y FontAwesome -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Tu CSS Maestro -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <!-- MENÚ DE NAVEGACIÓN -->
 <nav>
+
     <a href="index.html">
         <img src="assets/img/logo.png" alt="Logo Maycoop" class="logo-nav">
     </a>
+
     <div class="nav-links">
         <a href="index.html">Inicio</a>
         <a href="institucional.html">Nosotros</a>
@@ -26,17 +25,20 @@
         <a href="inversiones.html">Inversiones</a>
         <a href="referidos.html">Referidos</a>
     </div>
+
 </nav>
 
 <!-- CONTENIDO PRINCIPAL -->
 <main>
 
-    <!-- CABECERA DE PÁGINA (Reutilizable) -->
+    <!-- CABECERA DE PÁGINA -->
     <section class="cabecera-pagina">
+
         <div class="contenedor">
             <h1 class="titulo-pagina">SACÁ TU PRÉSTAMO HOY</h1>
             <p class="subtitulo-pagina">Para Empleados Públicos Nacionales, Bonaerenses, Municipales y Fuerzas de Seguridad.</p>
         </div>
+
     </section>
 
     <!-- SECCIÓN FORMULARIO Y BENEFICIOS -->
@@ -45,16 +47,21 @@
 
             <!-- Banner de Beneficios Rápidos -->
             <div class="banner-beneficios">
+
                 <div class="beneficio-item"><i class="fa-solid fa-check-circle"></i> Con/Sin Veraz</div>
                 <div class="beneficio-item"><i class="fa-solid fa-house"></i> Sin moverte de casa</div>
                 <div class="beneficio-item"><i class="fa-solid fa-bolt"></i> Respuesta inmediata</div>
+
             </div>
 
-            <!-- Mega Formulario Modular -->
+            <!-- Formulario Modular -->
+
             <div class="caja-formulario">
+
                 <div class="cabecera-seccion">
                     <h3 class="subtitulo-seccion">SOLICITUD ONLINE</h3>
                     <h2 class="titulo-seccion-centrado">COMPLETÁ TUS DATOS</h2>
+
                 </div>
 
                 <form action="#" method="POST" class="formulario-prestamo">
@@ -88,6 +95,7 @@
                                 <label for="telefono">Teléfono (Celular) *</label>
                                 <input type="tel" id="telefono" name="telefono" placeholder="Ej: 11 3484-3630" required>
                             </div>
+
                         </div>
 
                         <!-- COLUMNA 2: Información Crediticia -->
@@ -100,7 +108,9 @@
                             </div>
 
                             <div class="form-grupo">
+
                                 <label for="organismo">Organismo en el que trabajas *</label>
+
                                 <select id="organismo" name="organismo" required>
                                     <option value="" disabled selected>Seleccioná tu organismo...</option>
                                     <option value="bapro">Cobro por Banco Provincia (BAPRO)</option>
@@ -111,6 +121,7 @@
                                     <option value="salud">Médico / Enfermero PBA</option>
                                     <option value="otro">Otro (Consultar)</option>
                                 </select>
+
                             </div>
 
                             <div class="form-grupo">
@@ -119,7 +130,9 @@
                             </div>
 
                             <div class="form-grupo">
+
                                 <label for="cuotas">Cantidad de Cuotas *</label>
+
                                 <select id="cuotas" name="cuotas" required>
                                     <option value="" disabled selected>Elegí las cuotas...</option>
                                     <option value="3">3 Cuotas</option>
@@ -127,17 +140,19 @@
                                     <option value="12">12 Cuotas</option>
                                     <option value="18">18 Cuotas</option>
                                 </select>
+
                             </div>
 
                             <div class="form-grupo">
                                 <label for="destino">Destino del préstamo (Opcional)</label>
                                 <input type="text" id="destino" name="destino" placeholder="Ej: Arreglos en casa, Viaje...">
                             </div>
+
                         </div>
 
-                    </div> <!-- Cierre form-grid -->
+                    </div>
 
-                    <!-- FILA COMPLETA: Términos y Botón -->
+                    <!-- Términos y Botón -->
                     <div class="form-grupo-completo">
                         <label class="checkbox-container">
                             <input type="checkbox" id="terminos" required>

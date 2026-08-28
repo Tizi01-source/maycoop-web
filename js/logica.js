@@ -1,12 +1,13 @@
+
 document.addEventListener("DOMContentLoaded", () => {
 
-    // 1. Poner el año actual automáticamente en el footer
+    // Poner el año actual automáticamente en el footer
     const anioSpan = document.getElementById('anio-actual');
     if (anioSpan) {
         anioSpan.textContent = new Date().getFullYear();
     }
 
-    // 2. Inyectar las constantes en todos los lugares que tengan estas clases
+    // Inyectar las constantes en todos los lugares que tengan estas clases
     const inyectarDato = (clase, valor) => {
         document.querySelectorAll(clase).forEach(elemento => {
             elemento.textContent = valor;
