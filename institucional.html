@@ -1,10 +1,213 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros y Contacto | Maycoop Cooperativa</title>
+
+    <!-- Fuentes y FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tu CSS Maestro -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<!-- MENÚ DE NAVEGACIÓN -->
+<nav>
+    <a href="index.html">
+        <img src="assets/img/logo.png" alt="Logo Maycoop" class="logo-nav">
+    </a>
+    <div class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="institucional.html" class="activo">Nosotros</a>
+        <a href="prestamos.html">Préstamos</a>
+        <a href="inversiones.html">Inversiones</a>
+        <a href="referidos.html">Referidos</a>
+    </div>
+</nav>
+
+<!-- CONTENIDO PRINCIPAL -->
+<main>
+
+    <!-- CABECERA DE PÁGINA -->
+    <section class="cabecera-pagina">
+        <div class="contenedor">
+            <h1 class="titulo-pagina">LA COOPERATIVA</h1>
+            <p class="subtitulo-pagina">Conocé nuestra historia, sumate al equipo y resolvé tus dudas.</p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN NOSOTROS -->
+    <section class="seccion-nosotros">
+        <div class="contenedor">
+            <div class="cabecera-seccion">
+                <h3 class="subtitulo-seccion">UN LUGAR PARA CRECER</h3>
+                <h2 class="titulo-seccion-centrado">NUESTRO PROPÓSITO</h2>
+            </div>
+
+            <div class="nosotros-grid">
+                <div class="caja-proposito">
+                    <i class="fa-solid fa-bullseye icono-proposito"></i>
+                    <h3>Misión</h3>
+                    <p>Ofrecer soluciones financieras transparentes para nuestros asociados, creando relaciones sólidas, duraderas y de confianza.</p>
+                </div>
+
+                <div class="caja-proposito">
+                    <i class="fa-solid fa-eye icono-proposito"></i>
+                    <h3>Visión</h3>
+                    <p>Brindar ayuda financiera accesible en busca del desarrollo personal y el cumplimiento de los sueños de nuestros socios.</p>
+                </div>
+            </div>
+
+            <div class="valores-contenedor">
+                <h3 class="titulo-valores">NUESTROS VALORES</h3>
+                <div class="valores-grid">
+                    <div class="valor-item"><i class="fa-solid fa-shield"></i> Confianza y Seguridad</div>
+                    <div class="valor-item"><i class="fa-solid fa-users"></i> Sentido de Pertenencia</div>
+                    <div class="valor-item"><i class="fa-solid fa-gears"></i> Eficiencia y Gestión</div>
+                    <div class="valor-item"><i class="fa-solid fa-hand-holding-heart"></i> Honestidad y Transparencia</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN BOLSA DE TRABAJO -->
+    <section class="seccion-empleo">
+        <div class="contenedor">
+            <div class="cabecera-seccion">
+                <h3 class="subtitulo-seccion">ESTAMOS PARA AYUDARTE</h3>
+                <h2 class="titulo-seccion-centrado">TRABAJÁ CON NOSOTROS</h2>
+            </div>
+
+            <div class="caja-empleo">
+                <p class="texto-empleo">Si querés formar parte de nuestro equipo y lograr grandes éxitos, buscá en nuestra bolsa de trabajo la oferta que se ajuste a tu perfil.</p>
+
+                <div class="alerta-sin-ofertas">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <p>No hay anuncios que coincidan con tu búsqueda en este momento. ¡Volvé a revisar pronto!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN PREGUNTAS FRECUENTES (FAQs) -->
+    <section class="seccion-faqs">
+        <div class="contenedor">
+            <div class="cabecera-seccion">
+                <h3 class="subtitulo-seccion">NO TE QUEDES CON DUDAS</h3>
+                <h2 class="titulo-seccion-centrado">PREGUNTAS FRECUENTES</h2>
+            </div>
+
+            <div class="faq-contenedor">
+                <!-- Pregunta 1 -->
+                <div class="faq-item">
+                    <button class="faq-pregunta">¿Qué es Maycoop? <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-respuesta">
+                        <p>MAYCOOP es una cooperativa de crédito y vivienda con 14 años de experiencia, más de <span class="dato-socios"></span> socios y que ya otorgó <span class="dato-creditos"></span> ayudas financieras, invirtiendo en el desarrollo de sus asociados.</p>
+                    </div>
+                </div>
+
+                <!-- Pregunta 2 -->
+                <div class="faq-item">
+                    <button class="faq-pregunta">¿Puedo solicitar un préstamo si estoy en Veraz? <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-respuesta">
+                        <p>Sí, no importa si figurás en el Veraz. Todos los que cumplan los requisitos básicos pueden solicitar un préstamo. Todas las solicitudes son evaluadas por nuestro departamento de créditos.</p>
+                    </div>
+                </div>
+
+                <!-- Pregunta 3 -->
+                <div class="faq-item">
+                    <button class="faq-pregunta">¿Hasta cuánto puedo pedir y dónde pago? <i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="faq-respuesta">
+                        <p>Podemos ofrecerte hasta $50.000 (dependiendo de tu situación crediticia) para devolver de 2 a 12 cuotas. No necesitás ir a pagar a ningún lado, nosotros lo descontamos directamente para que no te tengas que preocupar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CONTACTO -->
+    <section id="contacto" class="seccion-contacto">
+        <div class="contenedor">
+            <div class="contacto-grid">
+
+                <!-- Columna Izquierda: Directorio -->
+                <div class="directorio-info">
+                    <h2 class="titulo-contacto">CONTACTANOS</h2>
+                    <p class="texto-contacto">Nuestro equipo de asesores está listo para responder cualquier consulta que tengas.</p>
+
+                    <div class="lista-directorios">
+                        <div class="directorio-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <h4>Créditos, Comercialización e Inversiones</h4>
+                                <span class="dato-tel-comercial"></span>
+                            </div>
+                        </div>
+                        <div class="directorio-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <h4>Cobranza y Mora</h4>
+                                <span class="dato-tel-cobranzas"></span>
+                            </div>
+                        </div>
+                        <div class="directorio-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <h4>Correo Electrónico</h4>
+                                <span class="dato-email"></span>
+                            </div>
+                        </div>
+                        <div class="directorio-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <h4>Oficinas</h4>
+                                <span class="dato-direccion"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Formulario Rápido -->
+                <div class="caja-formulario form-contacto-rapido">
+                    <h3 class="form-titulo-columna"><i class="fa-regular fa-paper-plane"></i> Envianos un mensaje</h3>
+                    <form action="#" method="POST">
+                        <div class="form-grupo">
+                            <label for="nombre-contacto">Nombre y Apellido *</label>
+                            <input type="text" id="nombre-contacto" required>
+                        </div>
+                        <div class="form-grupo">
+                            <label for="correo-contacto">Correo *</label>
+                            <input type="email" id="correo-contacto" required>
+                        </div>
+                        <div class="form-grupo">
+                            <label for="asunto-contacto">Asunto *</label>
+                            <input type="text" id="asunto-contacto" required>
+                        </div>
+                        <div class="form-grupo">
+                            <label for="mensaje-contacto">Mensaje *</label>
+                            <textarea id="mensaje-contacto" class="textarea-contacto" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-principal btn-ancho-completo btn-margen-top">ENVIAR MENSAJE</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <p>&copy; <span id="anio-actual"></span> Maycoop Cooperativa de Crédito y Vivienda. Todos los derechos reservados.</p>
+    <p><span class="dato-direccion"></span> | <i class="fa-brands fa-whatsapp"></i> <span class="dato-tel-comercial"></span></p>
+</footer>
+
+<!-- JS -->
+<script src="js/constantes.js"></script>
+<script src="js/logica.js"></script>
 </body>
 </html>

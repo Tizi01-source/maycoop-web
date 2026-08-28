@@ -334,3 +334,646 @@ main {
     color: #666;
     line-height: 1.5;
 }
+
+/* =========================================
+   SECCIÓN TESTIMONIOS
+   ========================================= */
+.seccion-testimonios {
+    background-color: var(--gris-claro);
+    padding-bottom: 80px;
+}
+
+.testimonios-grid {
+    display: grid;
+    /* Esto hace que sea responsive automáticamente sin Media Queries complejas */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.testimonio-card {
+    background-color: var(--blanco);
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+.testimonio-card:hover {
+    transform: translateY(-5px);
+}
+
+.estrellas {
+    color: #FFD700; /* Color dorado para las FontAwesome Stars */
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.testimonio-texto {
+    font-style: italic;
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Empuja el autor hacia abajo para que todas las cards midan igual */
+}
+
+.testimonio-autor h4 {
+    color: var(--turquesa);
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+}
+
+.testimonio-autor span {
+    color: var(--gris-carbon);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* =========================================
+   CABECERAS DE PÁGINAS INTERNAS (Reutilizable)
+   ========================================= */
+.cabecera-pagina {
+    background-color: var(--turquesa);
+    color: var(--blanco);
+    text-align: center;
+    padding: 80px 20px 60px;
+}
+
+.titulo-pagina {
+    font-size: 2.8rem;
+    margin: 0 0 15px 0;
+    text-transform: uppercase;
+}
+
+.subtitulo-pagina {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* =========================================
+   BANNER DE BENEFICIOS (Préstamos)
+   ========================================= */
+.seccion-formulario {
+    background-color: var(--gris-claro);
+    padding-bottom: 80px;
+}
+
+.banner-beneficios {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    background-color: var(--blanco);
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin: -30px auto 50px auto; /* Lo sube un poquito pisando la cabecera turquesa */
+    max-width: 900px;
+}
+
+.beneficio-item {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: var(--gris-carbon);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.beneficio-item i {
+    color: var(--magenta);
+    font-size: 1.3rem;
+}
+
+/* =========================================
+   ESTILOS DE FORMULARIO (Modular)
+   ========================================= */
+.caja-formulario {
+    background-color: var(--blanco);
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.formulario-prestamo {
+    margin-top: 40px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Acá creamos las dos columnas */
+    gap: 40px;
+}
+
+.form-titulo-columna {
+    color: var(--turquesa);
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    border-bottom: 2px solid var(--gris-claro);
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-grupo {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-grupo label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: var(--gris-carbon);
+}
+
+.form-grupo input,
+.form-grupo select {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-grupo input:focus,
+.form-grupo select:focus {
+    outline: none;
+    border-color: var(--turquesa);
+}
+
+.form-grupo-completo {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid var(--gris-claro);
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: #555;
+    cursor: pointer;
+}
+
+.checkbox-container input {
+    margin-top: 4px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* =========================================
+   RESPONSIVE (Celulares)
+   ========================================= */
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr; /* Fuerza una sola columna si la pantalla es chica */
+        gap: 20px;
+    }
+
+    .caja-formulario {
+        padding: 30px 20px;
+    }
+
+    .banner-beneficios {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* =========================================
+   SECCIÓN INVERSIONES Y TASAS
+   ========================================= */
+.seccion-tasas {
+    background-color: var(--blanco);
+    padding: 60px 0;
+}
+
+.margen-extra {
+    margin-top: 80px; /* Separación entre el bloque de pesos y dólares */
+}
+
+.tasas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.grid-centrado {
+    display: flex;
+    justify-content: center; /* Para centrar la tarjeta única de dólares */
+}
+
+.tarjeta-tasa {
+    background-color: var(--gris-claro);
+    border-radius: 12px;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    position: relative;
+    transition: transform 0.3s ease;
+    border-bottom: 4px solid var(--turquesa);
+}
+
+.tarjeta-tasa:hover {
+    transform: translateY(-10px);
+}
+
+.tarjeta-tasa.destaco-magenta {
+    border-bottom: 4px solid var(--magenta);
+    background-color: var(--blanco);
+    box-shadow: 0 10px 25px rgba(199, 21, 101, 0.15);
+}
+
+.tarjeta-tasa.destaco-turquesa {
+    min-width: 300px;
+    background-color: var(--blanco);
+    box-shadow: 0 10px 25px rgba(0, 154, 156, 0.15);
+}
+
+.etiqueta-destacado {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--magenta);
+    color: var(--blanco);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    white-space: nowrap;
+}
+
+.tasa-porcentaje {
+    font-size: 4rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--gris-carbon);
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.tarjeta-tasa.destaco-magenta .tasa-porcentaje {
+    color: var(--magenta);
+}
+
+.tarjeta-tasa.destaco-turquesa .tasa-porcentaje {
+    color: var(--turquesa);
+}
+
+.tasa-porcentaje span {
+    font-size: 2rem;
+}
+
+.tasa-tiempo {
+    font-size: 1.2rem;
+    color: var(--gris-carbon);
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+
+.tasa-desc {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+/* =========================================
+   SECCIÓN EDUCACIÓN FINANCIERA (Inversiones)
+   ========================================= */
+.seccion-educacion {
+    background-color: var(--gris-claro);
+    padding: 80px 20px;
+}
+
+.educacion-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.caja-info {
+    background-color: var(--blanco);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+    border-top: 4px solid var(--gris-carbon);
+}
+
+.icono-info {
+    font-size: 2.5rem;
+    color: var(--turquesa);
+    margin-bottom: 20px;
+}
+
+.caja-info h3 {
+    color: var(--gris-carbon);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.caja-info p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* =========================================
+   SECCIÓN REFERIDOS (Ajustes menores y utilitarios)
+   ========================================= */
+.pasos-sin-borde {
+    border-top: none;
+    padding-top: 60px;
+}
+
+.fondo-blanco-extra {
+    background-color: var(--blanco);
+    padding-top: 20px;
+}
+
+.caja-ayuda-referido {
+    background-color: rgba(0, 154, 156, 0.1);
+    border-left: 4px solid var(--turquesa);
+    padding: 20px;
+    border-radius: 0 8px 8px 0;
+    margin-top: 30px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.caja-ayuda-referido i {
+    color: var(--turquesa);
+    font-size: 1.5rem;
+    margin-top: 2px;
+}
+
+.caja-ayuda-referido p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--gris-carbon);
+    line-height: 1.5;
+}
+
+/* =========================================
+   SECCIÓN NOSOTROS
+   ========================================= */
+.seccion-nosotros {
+    background-color: var(--blanco);
+    padding: 60px 0;
+}
+
+.nosotros-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.caja-proposito {
+    text-align: center;
+    padding: 30px;
+    background-color: var(--gris-claro);
+    border-radius: 12px;
+}
+
+.icono-proposito {
+    font-size: 3rem;
+    color: var(--magenta);
+    margin-bottom: 20px;
+}
+
+.valores-contenedor {
+    text-align: center;
+    border-top: 1px solid #eaeaea;
+    padding-top: 40px;
+}
+
+.titulo-valores {
+    color: var(--turquesa);
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.valores-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.valor-item {
+    background-color: var(--gris-claro);
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    color: var(--gris-carbon);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.valor-item i {
+    color: var(--turquesa);
+}
+
+/* =========================================
+   SECCIÓN EMPLEO
+   ========================================= */
+.seccion-empleo {
+    background-color: var(--gris-claro);
+    padding: 60px 0;
+}
+
+.caja-empleo {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.texto-empleo {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.alerta-sin-ofertas {
+    background-color: var(--blanco);
+    padding: 30px;
+    border-radius: 8px;
+    border: 2px dashed #ccc;
+    color: #777;
+}
+
+.alerta-sin-ofertas i {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #ccc;
+}
+
+/* =========================================
+   SECCIÓN FAQS (Acordeón Visual)
+   ========================================= */
+.seccion-faqs {
+    background-color: var(--blanco);
+    padding: 80px 0;
+}
+
+.faq-contenedor {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.faq-pregunta {
+    width: 100%;
+    background-color: var(--blanco);
+    color: var(--gris-carbon);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    padding: 20px;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.faq-pregunta:hover {
+    background-color: var(--gris-claro);
+}
+
+.faq-pregunta i {
+    color: var(--turquesa);
+    transition: transform 0.3s;
+}
+
+.faq-respuesta {
+    background-color: var(--blanco);
+    padding: 0 20px 20px 20px;
+    display: none; /* Esto lo preparamos para que lo abra el JS después */
+}
+
+/* =========================================
+   SECCIÓN CONTACTO
+   ========================================= */
+.seccion-contacto {
+    background-color: var(--gris-carbon);
+    color: var(--blanco);
+    padding: 80px 0;
+}
+
+.contacto-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.titulo-contacto {
+    font-size: 2.5rem;
+    color: var(--turquesa);
+    margin-top: 0;
+}
+
+.texto-contacto {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 40px;
+}
+
+.lista-directorios {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.directorio-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.directorio-item i {
+    font-size: 1.8rem;
+    color: var(--magenta);
+}
+
+.directorio-item h4 {
+    margin: 0 0 5px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    text-transform: uppercase;
+}
+
+.directorio-item span {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.form-contacto-rapido {
+    padding: 40px;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .contacto-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================
+   AJUSTES FORMULARIO DE CONTACTO
+   ========================================= */
+.textarea-contacto {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    resize: vertical; /* Permite al usuario agrandarlo solo hacia abajo */
+    width: 100%; /* Asegura que no se desborde */
+    box-sizing: border-box;
+}
+
+.textarea-contacto:focus {
+    outline: none;
+    border-color: var(--turquesa);
+}
+
+.btn-margen-top {
+    margin-top: 15px;
+}

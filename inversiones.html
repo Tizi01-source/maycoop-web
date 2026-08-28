@@ -1,10 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inversiones | Maycoop Cooperativa</title>
+
+    <!-- Fuentes y FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tu CSS Maestro -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<!-- MENÚ DE NAVEGACIÓN -->
+<nav>
+    <a href="index.html">
+        <img src="assets/img/logo.png" alt="Logo Maycoop" class="logo-nav">
+    </a>
+    <div class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="institucional.html">Nosotros</a>
+        <a href="prestamos.html">Préstamos</a>
+        <a href="inversiones.html" class="activo">Inversiones</a>
+        <a href="referidos.html">Referidos</a>
+    </div>
+</nav>
+
+<!-- CONTENIDO PRINCIPAL -->
+<main>
+
+    <!-- CABECERA DE PÁGINA (Reutilizada) -->
+    <section class="cabecera-pagina">
+        <div class="contenedor">
+            <h1 class="titulo-pagina">INVERSIONES REALES</h1>
+            <p class="subtitulo-pagina">Invertí con nosotros de forma segura, transparente y muy rentable.</p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN TASAS DE INTERÉS -->
+    <section class="seccion-tasas">
+        <div class="contenedor">
+            <div class="cabecera-seccion">
+                <h3 class="subtitulo-seccion">NUESTRA CARTERA EN PESOS</h3>
+                <h2 class="titulo-seccion-centrado">OBLIGACIONES NEGOCIABLES DESDE $50.000</h2>
+            </div>
+
+            <div class="tasas-grid">
+                <!-- Tarjeta 1 Mes -->
+                <div class="tarjeta-tasa">
+                    <div class="tasa-porcentaje">46<span>%</span></div>
+                    <h4 class="tasa-tiempo">A 1 Mes</h4>
+                    <p class="tasa-desc">Tasa Nominal Anual (TNA)</p>
+                </div>
+
+                <!-- Tarjeta 3 Meses -->
+                <div class="tarjeta-tasa">
+                    <div class="tasa-porcentaje">45<span>%</span></div>
+                    <h4 class="tasa-tiempo">A 3 Meses</h4>
+                    <p class="tasa-desc">Tasa Nominal Anual (TNA)</p>
+                </div>
+
+                <!-- Tarjeta 6 Meses -->
+                <div class="tarjeta-tasa">
+                    <div class="tasa-porcentaje">50<span>%</span></div>
+                    <h4 class="tasa-tiempo">A 6 Meses</h4>
+                    <p class="tasa-desc">Tasa Nominal Anual (TNA)</p>
+                </div>
+
+                <!-- Tarjeta 12 Meses -->
+                <div class="tarjeta-tasa destaco-magenta">
+                    <div class="etiqueta-destacado">MÁS ELEGIDA</div>
+                    <div class="tasa-porcentaje">55<span>%</span></div>
+                    <h4 class="tasa-tiempo">A 12 Meses</h4>
+                    <p class="tasa-desc">Tasa Nominal Anual (TNA)</p>
+                </div>
+            </div>
+
+            <!-- Cartera en Dólares -->
+            <div class="cabecera-seccion margen-extra">
+                <h3 class="subtitulo-seccion">NUESTRA CARTERA EN DÓLARES</h3>
+                <h2 class="titulo-seccion-centrado">HACÉ CRECER TUS AHORROS EN USD</h2>
+            </div>
+
+            <div class="tasas-grid grid-centrado">
+                <div class="tarjeta-tasa destaco-turquesa">
+                    <div class="tasa-porcentaje">10<span>%</span></div>
+                    <h4 class="tasa-tiempo">A 90 Días</h4>
+                    <p class="tasa-desc">Tasa Anual - Desde USD 1.000</p>
+                </div>
+            </div>
+
+            <!-- CTA WhatsApp -->
+            <div class="boton-centrado">
+                <a href="#" class="btn-principal btn-whatsapp-inversiones"><i class="fa-brands fa-whatsapp"></i> Armá tu plan con un asesor</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN EDUCACIÓN FINANCIERA -->
+    <section class="seccion-educacion">
+        <div class="contenedor">
+            <div class="educacion-grid">
+
+                <div class="caja-info">
+                    <i class="fa-solid fa-shield-halved icono-info"></i>
+                    <h3>¿Por qué invertir en cooperativas?</h3>
+                    <p>Las inversiones en cooperativas son más seguras. Vos sabés en dónde estás invirtiendo, conocés que son activos reales (préstamos a personas físicas) y el riesgo es mucho menor que las inversiones financieras tradicionales. Ganás ayudando a hacer proyectos realidad.</p>
+                </div>
+
+                <div class="caja-info">
+                    <i class="fa-solid fa-file-invoice-dollar icono-info"></i>
+                    <h3>¿Qué es una Obligación Negociable?</h3>
+                    <p>Las Obligaciones Negociables (ONs) son instrumentos de deuda privada que pueden negociarse en el mercado. En palabras más simples, son bonos que pueden ser emitidos por instituciones, los cuales comprás y obtenés una tasa de ganancia fija asegurada.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER (Reutilizado) -->
+<footer>
+    <p>&copy; <span id="anio-actual"></span> Maycoop Cooperativa de Crédito y Vivienda. Todos los derechos reservados.</p>
+    <p><span class="dato-direccion"></span> | <i class="fa-brands fa-whatsapp"></i> <span class="dato-tel-comercial"></span></p>
+</footer>
+
+<!-- JS -->
+<script src="js/constantes.js"></script>
+<script src="js/logica.js"></script>
 </body>
 </html>
