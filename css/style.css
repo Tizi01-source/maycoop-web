@@ -1,0 +1,336 @@
+/* =========================================
+   VARIABLES DE COLOR
+   ========================================= */
+
+:root {
+    --turquesa: #009A9C;     /* Lado izquierdo del logo */
+    --magenta: #C71565;      /* Lado derecho del logo y botones */
+    --gris-carbon: #2C3338;  /* Footer y textos fuertes */
+    --gris-claro: #F4F5F7;   /* Fondos secundarios */
+    --blanco: #FFFFFF;
+}
+
+/* =========================================
+   CONFIGURACIÓN GENERAL Y TIPOGRAFÍA
+   ========================================= */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif; /* Letra de lectura */
+    color: var(--gris-carbon);
+    background-color: var(--blanco);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif; /* Letra corporativa para títulos */
+    font-weight: 700;
+}
+
+/* =========================================
+   BARRA DE NAVEGACIÓN
+   ========================================= */
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--blanco);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--gris-carbon);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.activo {
+    color: var(--magenta);
+}
+
+.logo-nav {
+    height: 50px;
+    width: auto;
+}
+
+/* =========================================
+   BOTONES
+   ========================================= */
+
+.btn-principal {
+    background-color: var(--magenta);
+    color: var(--blanco);
+    padding: 15px 30px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.btn-principal:hover {
+    background-color: #A01050; /* Un magenta más oscuro */
+    transform: scale(1.02);
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    background-color: var(--gris-carbon);
+    color: var(--blanco);
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Margen superior para que el menú fijo no tape el contenido */
+
+main {
+    margin-top: 80px;
+}
+
+/* =========================================
+   SECCIÓN HERO
+   ========================================= */
+.hero {
+    /* El ../ sirve para salir de la carpeta css y buscar assets */
+    background: linear-gradient(135deg, rgba(0, 154, 156, 0.8), rgba(199, 21, 101, 0.8)), url('../assets/img/foto-hero.jpg') center/cover;
+    padding: 150px 20px;
+    text-align: center;
+    color: var(--blanco);
+}
+
+.hero-subtitulo {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero-titulo {
+    font-size: 3.5rem;
+    margin: 0 0 40px 0;
+}
+
+
+
+/* =========================================
+   CONTENEDOR GENERAL Y TÍTULOS
+   ========================================= */
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.titulo-seccion {
+    font-size: 1.5rem;
+    color: var(--turquesa);
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+.titulo-seccion span {
+    color: var(--gris-carbon);
+    font-size: 2rem;
+}
+
+/* =========================================
+   SECCIÓN CALCULADORA
+   ========================================= */
+.calculadora-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    align-items: center;
+}
+
+.caja-simulador {
+    flex: 1;
+    min-width: 300px;
+    background-color: var(--gris-claro);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.botones-opciones {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.btn-opcion {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid var(--turquesa);
+    background-color: transparent;
+    color: var(--turquesa);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-opcion:hover, .btn-opcion.activo {
+    background-color: var(--turquesa);
+    color: var(--blanco);
+}
+
+.resultado-cuota {
+    text-align: center;
+    margin: 30px 0;
+    padding: 20px;
+    background-color: var(--blanco);
+    border-radius: 8px;
+    border-left: 5px solid var(--magenta);
+}
+
+.resultado-cuota h3 {
+    font-size: 2.5rem;
+    color: var(--magenta);
+    margin: 10px 0;
+}
+
+.resultado-cuota small {
+    font-size: 0.75rem;
+    color: #777;
+}
+
+.btn-ancho-completo {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* =========================================
+   LISTA DE BENEFICIOS (Columna Derecha)
+   ========================================= */
+.caja-beneficios {
+    flex: 1;
+    min-width: 300px;
+}
+
+.lista-beneficios {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lista-beneficios li {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.lista-beneficios li i {
+    color: var(--magenta);
+    font-size: 1.5rem;
+}
+
+/* =========================================
+   CABECERAS CENTRALES (Reutilizables)
+   ========================================= */
+.cabecera-seccion {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.subtitulo-seccion {
+    color: var(--magenta);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.titulo-seccion-centrado {
+    font-size: 2.2rem;
+    color: var(--gris-carbon);
+    margin-top: 0;
+}
+
+.boton-centrado {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* =========================================
+   SECCIÓN 5 PASOS
+   ========================================= */
+.seccion-pasos {
+    background-color: var(--blanco);
+    border-top: 1px solid #eaeaea; /* Una línea sutil para separar secciones */
+}
+
+.pasos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.paso-item {
+    flex: 1;
+    min-width: 180px;
+    max-width: 220px;
+    text-align: center;
+    padding: 15px;
+}
+
+.paso-numero {
+    width: 65px;
+    height: 65px;
+    background-color: var(--turquesa);
+    color: var(--blanco);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 4px 10px rgba(0, 154, 156, 0.3); /* Sombra turquesa para darle relieve */
+}
+
+.paso-titulo {
+    color: var(--gris-carbon);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.paso-texto {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+}

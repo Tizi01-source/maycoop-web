@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Maycoop | Cooperativa de Crédito y Vivienda</title>
+
+    <!-- Fuentes de Google: Montserrat y Open Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Iconos FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tu CSS Maestro -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- MENÚ DE NAVEGACIÓN -->
+<nav>
+    <a href="index.html">
+        <img src="assets/img/logo.png" alt="Logo Maycoop" class="logo-nav">
+    </a>
+    <div class="nav-links">
+        <a href="index.html" class="activo">Inicio</a>
+        <a href="institucional.html">Nosotros</a>
+        <a href="prestamos.html">Préstamos</a>
+        <a href="inversiones.html">Inversiones</a>
+        <a href="referidos.html">Referidos</a>
+    </div>
+</nav>
+
+<!-- CONTENIDO PRINCIPAL DE LA PÁGINA -->
+<main>
+
+    <!-- SECCIÓN HERO (Inicio) -->
+    <section class="hero">
+        <h3 class="hero-subtitulo">TUS SUEÑOS ESTÁN A UN CLICK DE SER REALIDAD</h3>
+        <h1 class="hero-titulo">OBTENÉ TU PRÉSTAMO EN<br>POCOS MINUTOS</h1>
+        <a href="prestamos.html" class="btn-principal">Solicitud Online</a>
+    </section>
+
+    <!-- ACÁ IREMOS SUMANDO LAS DEMÁS SECCIONES (5 pasos, simulador, etc.) -->
+
+    <!-- SECCIÓN CALCULADORA Y BENEFICIOS -->
+    <section class="seccion-calculadora">
+        <div class="contenedor">
+            <div class="calculadora-grid">
+
+                <!-- Columna Izquierda: El Simulador -->
+                <div class="caja-simulador">
+                    <h2 class="titulo-seccion">PRÉSTAMO DE EMERGENCIA<br><span>¿NECESITÁS EFECTIVO AHORA?</span></h2>
+
+                    <div class="simulador-controles">
+                        <p>Seleccioná el monto:</p>
+                        <div class="botones-opciones">
+                            <button class="btn-opcion activo">$10.000</button>
+                            <button class="btn-opcion">$20.000</button>
+                            <button class="btn-opcion">$60.000</button>
+                        </div>
+
+                        <p>Seleccioná las cuotas:</p>
+                        <div class="botones-opciones">
+                            <button class="btn-opcion">1 Cuota</button>
+                            <button class="btn-opcion activo">6 Cuotas</button>
+                            <button class="btn-opcion">12 Cuotas</button>
+                        </div>
+                    </div>
+
+                    <div class="resultado-cuota">
+                        <p>Tu cuota estimativa es de:</p>
+                        <h3>$5.631</h3>
+                        <small>* EL VALOR DE LA CUOTA ES ESTIMATIVO</small>
+                    </div>
+
+                    <a href="prestamos.html" class="btn-principal btn-ancho-completo">SOLICITAR AHORA</a>
+                </div>
+
+                <!-- Columna Derecha: Beneficios -->
+                <div class="caja-beneficios">
+                    <ul class="lista-beneficios">
+                        <li><i class="fa-solid fa-check-circle"></i> Con/Sin Veraz</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Sin costos de mantenimiento</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Cancelación total o parcial sin costo</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Te damos respuesta inmediata</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Consultá si tu institución está habilitada</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 5 PASOS -->
+    <section class="seccion-pasos">
+        <div class="contenedor">
+            <div class="cabecera-seccion">
+                <h3 class="subtitulo-seccion">SÚPER RÁPIDO</h3>
+                <h2 class="titulo-seccion-centrado">¿SABÉS CÓMO OBTENER EL DINERO QUE NECESITÁS?</h2>
+            </div>
+
+            <div class="pasos-grid">
+                <!-- Paso 1 -->
+                <div class="paso-item">
+                    <div class="paso-numero">1</div>
+                    <h4 class="paso-titulo">SOLICITUD</h4>
+                    <p class="paso-texto">Completá la solicitud online y dejanos tus datos.</p>
+                </div>
+
+                <!-- Paso 2 -->
+                <div class="paso-item">
+                    <div class="paso-numero">2</div>
+                    <h4 class="paso-titulo">ANÁLISIS</h4>
+                    <p class="paso-texto">Evaluamos tu solicitud y te respondemos en pocos minutos.</p>
+                </div>
+
+                <!-- Paso 3 -->
+                <div class="paso-item">
+                    <div class="paso-numero">3</div>
+                    <h4 class="paso-titulo">APROBADO</h4>
+                    <p class="paso-texto">Te enviamos la solicitud para que llenes y nos envíes firmada.</p>
+                </div>
+
+                <!-- Paso 4 -->
+                <div class="paso-item">
+                    <div class="paso-numero">4</div>
+                    <h4 class="paso-titulo">DEPÓSITO</h4>
+                    <p class="paso-texto">Te damos el monto acordado para que lo uses en lo que quieras.</p>
+                </div>
+
+                <!-- Paso 5 -->
+                <div class="paso-item">
+                    <div class="paso-numero">5</div>
+                    <h4 class="paso-titulo">CUOTAS</h4>
+                    <p class="paso-texto">Lo devolvés en la cantidad de cuotas que lo solicitaste.</p>
+                </div>
+            </div>
+
+            <div class="boton-centrado">
+                <a href="contacto.html" class="btn-principal">Envíanos un mensaje</a>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <p>&copy; <span id="anio-actual"></span> Maycoop Cooperativa de Crédito y Vivienda. Todos los derechos reservados.</p>
+    <p><span class="dato-direccion"></span> | <i class="fa-brands fa-whatsapp"></i> <span class="dato-tel-comercial"></span></p>
+</footer>
+
+<!-- TUS ARCHIVOS JAVASCRIPT (Primero las constantes, luego la lógica) -->
+<script src="js/constantes.js"></script>
+<script src="js/logica.js"></script>
+</body>
+</html>

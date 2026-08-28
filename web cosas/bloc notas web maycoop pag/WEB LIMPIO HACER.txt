@@ -1,0 +1,38 @@
+1. index.html (Inicio)
+La puerta de entrada principal para enganchar al socio.
+Hero Section: "Tus sueños a un click" y el simulador rápido de cuotas.  
+Los 5 pasos: Explicación visual de cómo funciona (Solicitud, Análisis, Aprobado, Depósito, Cuotas).  
+Testimonios: Ponemos a María Luisa, Mónica, Agustín y Ernesto acá, una sola vez, y no los repetimos en ninguna otra página.  
+
+2. prestamos.html (Créditos y Situación Crediticia)
+Acá va todo el "core" del negocio.
+A quién va dirigido: Detallamos que es para empleados públicos nacionales, provinciales, municipales y fuerzas de seguridad.  
+Beneficios: Aclaramos que se puede sacar con o sin Veraz y sin moverse de casa.  
+Formulario Único: Un mega formulario bien maquetado para pedir los datos personales (DNI, CUIT, Organismo) y procesar la solicitud.  
+
+3. inversiones.html (Ahorros)
+La sección para captar capital.
+Tasas de interés: Mostramos las placas con el 46%, 50% y 55% anual en pesos, y el 10% en dólares.  
+Educación financiera: Explicamos brevemente qué es una Obligación Negociable (ON) y por qué invertir en una cooperativa es seguro.  
+Contacto directo: Botones de WhatsApp apuntando directo al asesor de inversiones.  
+
+4. referidos.html (Programa de Beneficios)
+Unificamos "Referentes", "Referidos" y "Agentes".
+El gancho: "Podés ganar hasta $2.500 por cada referido que obtenga un préstamo".  
+Formulario de Referidos: Los campos para que el socio cargue el DNI y mail de la persona interesada.  
+
+5. institucional.html (Nosotros, Empleo y Contacto)
+La página de confianza y soporte.
+Nosotros: La historia (14 años), Misión, Visión y Valores.  
+Bolsa de Trabajo: Un bloque con las "Ofertas de empleo" (Full Time, Part Time) para sumarse al equipo.  
+Preguntas Frecuentes (FAQs): Un acordeón interactivo (que armaremos con un poquito de JS) respondiendo dudas como "¿Qué es Maycoop?" o "¿Hasta cuánto puedo pedir?". 
+ Directorio de Contacto: Todos los números divididos por área y la dirección. 
+
+
+
+
+
+
+
+
+
