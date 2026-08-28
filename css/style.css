@@ -1,6 +1,6 @@
-/* =========================================
-   VARIABLES DE COLOR
-   ========================================= */
+/* ==========================================================================
+   VARIABLES Y CONFIGURACIÓN GENERAL
+   ========================================================================== */
 
 :root {
     --turquesa: #009A9C;     /* Lado izquierdo del logo */
@@ -10,14 +10,10 @@
     --blanco: #FFFFFF;
 }
 
-/* =========================================
-   CONFIGURACIÓN GENERAL Y TIPOGRAFÍA
-   ========================================= */
-
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif; /* Letra de lectura */
+    font-family: 'Open Sans', sans-serif;
     color: var(--gris-carbon);
     background-color: var(--blanco);
     scroll-behavior: smooth;
@@ -25,13 +21,60 @@ body, html {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif; /* Letra corporativa para títulos */
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
 }
 
-/* =========================================
-   BARRA DE NAVEGACIÓN
-   ========================================= */
+main {
+    margin-top: 80px; /* Margen superior para que el menú fijo no tape el contenido */
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* --- Títulos y Cabeceras Centrales Reutilizables --- */
+
+.cabecera-seccion {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.subtitulo-seccion {
+    color: var(--magenta);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.titulo-seccion {
+    font-size: 1.5rem;
+    color: var(--turquesa);
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+.titulo-seccion span {
+    color: var(--gris-carbon);
+    font-size: 2rem;
+}
+
+.titulo-seccion-centrado {
+    font-size: 2.2rem;
+    color: var(--gris-carbon);
+    margin-top: 0;
+}
+
+/* ==========================================================================
+   COMPONENTES COMPARTIDOS
+   ========================================================================== */
+
+/* --- Barra de Navegación --- */
 
 nav {
     position: fixed;
@@ -71,9 +114,30 @@ nav {
     width: auto;
 }
 
-/* =========================================
-   BOTONES
-   ========================================= */
+/* --- Cabeceras de Páginas Internas --- */
+
+.cabecera-pagina {
+    background-color: var(--turquesa);
+    color: var(--blanco);
+    text-align: center;
+    padding: 80px 20px 60px;
+}
+
+.titulo-pagina {
+    font-size: 2.8rem;
+    margin: 0 0 15px 0;
+    text-transform: uppercase;
+}
+
+.subtitulo-pagina {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* --- Botones --- */
 
 .btn-principal {
     background-color: var(--magenta);
@@ -92,13 +156,22 @@ nav {
 }
 
 .btn-principal:hover {
-    background-color: #A01050; /* Un magenta más oscuro */
+    background-color: #A01050;
     transform: scale(1.02);
 }
 
-/* =========================================
-   FOOTER
-   ========================================= */
+.btn-ancho-completo {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.boton-centrado {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* --- Footer --- */
 
 footer {
     background-color: var(--gris-carbon);
@@ -107,17 +180,13 @@ footer {
     padding: 40px 20px;
 }
 
-/* Margen superior para que el menú fijo no tape el contenido */
+/* ==========================================================================
+   PÁGINA: INICIO (index.html)
+   ========================================================================== */
 
-main {
-    margin-top: 80px;
-}
+/* --- Sección: Hero --- */
 
-/* =========================================
-   SECCIÓN HERO
-   ========================================= */
 .hero {
-    /* El ../ sirve para salir de la carpeta css y buscar assets */
     background: linear-gradient(135deg, rgba(0, 154, 156, 0.8), rgba(199, 21, 101, 0.8)), url('../assets/img/foto-hero.jpg') center/cover;
     padding: 150px 20px;
     text-align: center;
@@ -136,32 +205,8 @@ main {
     margin: 0 0 40px 0;
 }
 
+/* --- Sección: Calculadora --- */
 
-
-/* =========================================
-   CONTENEDOR GENERAL Y TÍTULOS
-   ========================================= */
-.contenedor {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 60px 20px;
-}
-
-.titulo-seccion {
-    font-size: 1.5rem;
-    color: var(--turquesa);
-    margin-bottom: 30px;
-    line-height: 1.4;
-}
-
-.titulo-seccion span {
-    color: var(--gris-carbon);
-    font-size: 2rem;
-}
-
-/* =========================================
-   SECCIÓN CALCULADORA
-   ========================================= */
 .calculadora-grid {
     display: flex;
     flex-wrap: wrap;
@@ -222,15 +267,8 @@ main {
     color: #777;
 }
 
-.btn-ancho-completo {
-    width: 100%;
-    text-align: center;
-    box-sizing: border-box;
-}
+/* --- Sección: Beneficios (Lista) --- */
 
-/* =========================================
-   LISTA DE BENEFICIOS (Columna Derecha)
-   ========================================= */
 .caja-beneficios {
     flex: 1;
     min-width: 300px;
@@ -255,41 +293,11 @@ main {
     font-size: 1.5rem;
 }
 
-/* =========================================
-   CABECERAS CENTRALES (Reutilizables)
-   ========================================= */
-.cabecera-seccion {
-    text-align: center;
-    margin-bottom: 50px;
-}
+/* --- Sección: 5 Pasos --- */
 
-.subtitulo-seccion {
-    color: var(--magenta);
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    font-size: 1rem;
-}
-
-.titulo-seccion-centrado {
-    font-size: 2.2rem;
-    color: var(--gris-carbon);
-    margin-top: 0;
-}
-
-.boton-centrado {
-    text-align: center;
-    margin-top: 50px;
-}
-
-/* =========================================
-   SECCIÓN 5 PASOS
-   ========================================= */
 .seccion-pasos {
     background-color: var(--blanco);
-    border-top: 1px solid #eaeaea; /* Una línea sutil para separar secciones */
+    border-top: 1px solid #eaeaea;
 }
 
 .pasos-grid {
@@ -320,7 +328,7 @@ main {
     align-items: center;
     justify-content: center;
     margin: 0 auto 20px auto;
-    box-shadow: 0 4px 10px rgba(0, 154, 156, 0.3); /* Sombra turquesa para darle relieve */
+    box-shadow: 0 4px 10px rgba(0, 154, 156, 0.3);
 }
 
 .paso-titulo {
@@ -335,9 +343,8 @@ main {
     line-height: 1.5;
 }
 
-/* =========================================
-   SECCIÓN TESTIMONIOS
-   ========================================= */
+/* --- Sección: Testimonios --- */
+
 .seccion-testimonios {
     background-color: var(--gris-claro);
     padding-bottom: 80px;
@@ -345,7 +352,6 @@ main {
 
 .testimonios-grid {
     display: grid;
-    /* Esto hace que sea responsive automáticamente sin Media Queries complejas */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
     margin-top: 40px;
@@ -368,7 +374,7 @@ main {
 }
 
 .estrellas {
-    color: #FFD700; /* Color dorado para las FontAwesome Stars */
+    color: #FFD700;
     margin-bottom: 15px;
     font-size: 0.9rem;
 }
@@ -379,7 +385,7 @@ main {
     font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: 20px;
-    flex-grow: 1; /* Empuja el autor hacia abajo para que todas las cards midan igual */
+    flex-grow: 1;
 }
 
 .testimonio-autor h4 {
@@ -395,37 +401,17 @@ main {
     text-transform: uppercase;
 }
 
-/* =========================================
-   CABECERAS DE PÁGINAS INTERNAS (Reutilizable)
-   ========================================= */
-.cabecera-pagina {
-    background-color: var(--turquesa);
-    color: var(--blanco);
-    text-align: center;
-    padding: 80px 20px 60px;
-}
+/* ==========================================================================
+   PÁGINA: PRÉSTAMOS (prestamos.html)
+   (NOTA: Los estilos de formulario se reciclan en Referidos y Contacto)
+   ========================================================================== */
 
-.titulo-pagina {
-    font-size: 2.8rem;
-    margin: 0 0 15px 0;
-    text-transform: uppercase;
-}
-
-.subtitulo-pagina {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin: 0;
-    opacity: 0.9;
-}
-
-/* =========================================
-   BANNER DE BENEFICIOS (Préstamos)
-   ========================================= */
 .seccion-formulario {
     background-color: var(--gris-claro);
     padding-bottom: 80px;
 }
+
+/* --- Banner Beneficios --- */
 
 .banner-beneficios {
     display: flex;
@@ -436,7 +422,7 @@ main {
     padding: 20px 40px;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    margin: -30px auto 50px auto; /* Lo sube un poquito pisando la cabecera turquesa */
+    margin: -30px auto 50px auto;
     max-width: 900px;
 }
 
@@ -454,9 +440,8 @@ main {
     font-size: 1.3rem;
 }
 
-/* =========================================
-   ESTILOS DE FORMULARIO (Modular)
-   ========================================= */
+/* --- Formularios Modulares --- */
+
 .caja-formulario {
     background-color: var(--blanco);
     padding: 50px;
@@ -472,7 +457,7 @@ main {
 
 .form-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Acá creamos las dos columnas */
+    grid-template-columns: 1fr 1fr;
     gap: 40px;
 }
 
@@ -539,35 +524,19 @@ main {
     text-align: center;
 }
 
-/* =========================================
-   RESPONSIVE (Celulares)
-   ========================================= */
-@media (max-width: 768px) {
-    .form-grid {
-        grid-template-columns: 1fr; /* Fuerza una sola columna si la pantalla es chica */
-        gap: 20px;
-    }
+/* ==========================================================================
+    PÁGINA: INVERSIONES (inversiones.html)
+   ========================================================================== */
 
-    .caja-formulario {
-        padding: 30px 20px;
-    }
+/* --- Sección: Tasas de Interés --- */
 
-    .banner-beneficios {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-/* =========================================
-   SECCIÓN INVERSIONES Y TASAS
-   ========================================= */
 .seccion-tasas {
     background-color: var(--blanco);
     padding: 60px 0;
 }
 
 .margen-extra {
-    margin-top: 80px; /* Separación entre el bloque de pesos y dólares */
+    margin-top: 80px;
 }
 
 .tasas-grid {
@@ -579,7 +548,7 @@ main {
 
 .grid-centrado {
     display: flex;
-    justify-content: center; /* Para centrar la tarjeta única de dólares */
+    justify-content: center;
 }
 
 .tarjeta-tasa {
@@ -658,9 +627,8 @@ main {
     margin: 0;
 }
 
-/* =========================================
-   SECCIÓN EDUCACIÓN FINANCIERA (Inversiones)
-   ========================================= */
+/* --- Sección: Educación Financiera --- */
+
 .seccion-educacion {
     background-color: var(--gris-claro);
     padding: 80px 20px;
@@ -700,9 +668,10 @@ main {
     font-size: 0.95rem;
 }
 
-/* =========================================
-   SECCIÓN REFERIDOS (Ajustes menores y utilitarios)
-   ========================================= */
+/* ==========================================================================
+   PÁGINA: REFERIDOS (referidos.html)
+   ========================================================================== */
+
 .pasos-sin-borde {
     border-top: none;
     padding-top: 60px;
@@ -737,9 +706,12 @@ main {
     line-height: 1.5;
 }
 
-/* =========================================
-   SECCIÓN NOSOTROS
-   ========================================= */
+/* ==========================================================================
+   PÁGINA: INSTITUCIONAL (institucional.html)
+   ========================================================================== */
+
+/* --- Sección: Nosotros --- */
+
 .seccion-nosotros {
     background-color: var(--blanco);
     padding: 60px 0;
@@ -799,9 +771,8 @@ main {
     color: var(--turquesa);
 }
 
-/* =========================================
-   SECCIÓN EMPLEO
-   ========================================= */
+/* --- Sección: Bolsa de Trabajo --- */
+
 .seccion-empleo {
     background-color: var(--gris-claro);
     padding: 60px 0;
@@ -833,9 +804,8 @@ main {
     color: #ccc;
 }
 
-/* =========================================
-   SECCIÓN FAQS (Acordeón Visual)
-   ========================================= */
+/* --- Sección: FAQs (Preguntas Frecuentes) --- */
+
 .seccion-faqs {
     background-color: var(--blanco);
     padding: 80px 0;
@@ -882,12 +852,11 @@ main {
 .faq-respuesta {
     background-color: var(--blanco);
     padding: 0 20px 20px 20px;
-    display: none; /* Esto lo preparamos para que lo abra el JS después */
+    display: none;
 }
 
-/* =========================================
-   SECCIÓN CONTACTO
-   ========================================= */
+/* --- Sección: Contacto --- */
+
 .seccion-contacto {
     background-color: var(--gris-carbon);
     color: var(--blanco);
@@ -948,15 +917,6 @@ main {
     margin: 0;
 }
 
-@media (max-width: 768px) {
-    .contacto-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* =========================================
-   AJUSTES FORMULARIO DE CONTACTO
-   ========================================= */
 .textarea-contacto {
     padding: 12px 15px;
     border: 1px solid #ccc;
@@ -964,8 +924,8 @@ main {
     font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
     transition: border-color 0.3s;
-    resize: vertical; /* Permite al usuario agrandarlo solo hacia abajo */
-    width: 100%; /* Asegura que no se desborde */
+    resize: vertical;
+    width: 100%;
     box-sizing: border-box;
 }
 
@@ -976,4 +936,30 @@ main {
 
 .btn-margen-top {
     margin-top: 15px;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES (Diseño Responsivo / Celulares)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    /* Ajustes generales y de formularios */
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .caja-formulario {
+        padding: 30px 20px;
+    }
+
+    .banner-beneficios {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Ajustes específicos de Contacto */
+    .contacto-grid {
+        grid-template-columns: 1fr;
+    }
 }
