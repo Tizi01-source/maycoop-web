@@ -190,13 +190,28 @@ function inicializarFormularioContacto() {
             });
 
             if (response.ok) {
-                alert('¡Mensaje enviado con éxito! Nos pondremos en contacto a la brevedad.');
+                Swal.fire({
+                    title: '¡Mensaje enviado!',
+                    text: 'Nos pondremos en contacto a la brevedad.',
+                    icon: 'success',
+                    confirmButtonColor: '#C71565'
+                });
                 formContacto.reset(); // Limpia los campos
             } else {
-                alert('Hubo un error al enviar el mensaje. Por favor, intentá de nuevo.');
+                Swal.fire({
+                    title: 'Error',
+                    text: 'Hubo un error al enviar el mensaje. Por favor, intentá de nuevo.',
+                    icon: 'error',
+                    confirmButtonColor: '#C71565'
+                });
             }
         } catch (error) {
-            alert('Error de conexión. Revisá tu internet e intentá nuevamente.');
+            Swal.fire({
+                title: 'Error de conexión',
+                text: 'Revisá tu internet e intentá nuevamente.',
+                icon: 'warning',
+                confirmButtonColor: '#C71565'
+            });
         } finally {
             // Restauramos el botón a su estado normal
             boton.textContent = textoOriginal;
@@ -274,13 +289,28 @@ DATOS CREDITICIOS:
             });
 
             if (response.ok) {
-                alert('¡Solicitud enviada con éxito! El departamento de créditos la analizará y te contactará.');
+                Swal.fire({
+                    title: '¡Solicitud enviada!',
+                    text: 'El departamento de créditos la analizará y te contactará.',
+                    icon: 'success',
+                    confirmButtonColor: '#C71565'
+                });
                 formPrestamo.reset();
             } else {
-                alert('Hubo un error al enviar la solicitud. Por favor, intentá de nuevo.');
+                Swal.fire({
+                    title: 'Error',
+                    text: 'Hubo un error al enviar el mensaje. Por favor, intentá de nuevo.',
+                    icon: 'error',
+                    confirmButtonColor: '#C71565'
+                });
             }
         } catch (error) {
-            alert('Error de conexión. Revisá tu internet e intentá nuevamente.');
+            Swal.fire({
+                title: 'Error de conexión',
+                text: 'Revisá tu internet e intentá nuevamente.',
+                icon: 'warning',
+                confirmButtonColor: '#C71565'
+            });
         } finally {
             boton.textContent = textoOriginal;
             boton.disabled = false;
@@ -346,13 +376,28 @@ DATOS DEL INTERESADO (Nuevo cliente referido):
             });
 
             if (response.ok) {
-                alert('¡Datos enviados con éxito! Nos pondremos en contacto con tu referido a la brevedad.');
+                Swal.fire({
+                    title: '¡Datos enviados!',
+                    text: 'Nos pondremos en contacto con tu referido a la brevedad.',
+                    icon: 'success',
+                    confirmButtonColor: '#C71565'
+                });
                 formReferidos.reset();
             } else {
-                alert('Hubo un error al enviar los datos. Por favor, intentá de nuevo.');
+                Swal.fire({
+                    title: 'Error',
+                    text: 'Hubo un error al enviar el mensaje. Por favor, intentá de nuevo.',
+                    icon: 'error',
+                    confirmButtonColor: '#C71565'
+                });
             }
         } catch (error) {
-            alert('Error de conexión. Revisá tu internet e intentá nuevamente.');
+            Swal.fire({
+                title: 'Error de conexión',
+                text: 'Revisá tu internet e intentá nuevamente.',
+                icon: 'warning',
+                confirmButtonColor: '#C71565'
+            });
         } finally {
             boton.textContent = textoOriginal;
             boton.disabled = false;
