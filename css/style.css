@@ -114,6 +114,16 @@ nav {
     width: auto;
 }
 
+/* Ocultar botón hamburguesa en PC */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--turquesa);
+    cursor: pointer;
+}
+
 /* --- Cabeceras de Páginas Internas --- */
 
 .cabecera-pagina {
@@ -121,6 +131,29 @@ nav {
     color: var(--blanco);
     text-align: center;
     padding: 80px 20px 60px;
+
+    /* Efecto Parallax para todas */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* --- Fondos específicos para cada página (con el efecto oscurito) --- */
+.fondo-nosotros {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/img/foto-nosotros.jpg');
+}
+
+.fondo-prestamos {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/img/foto-prestamos.png');
+}
+
+.fondo-inversiones {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/img/foto-inversiones.jpg');
+}
+
+.fondo-referidos {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/img/foto-referidos.jpg');
 }
 
 .titulo-pagina {
@@ -352,9 +385,22 @@ footer {
 
 .testimonios-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     margin-top: 40px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding-bottom: 20px;
+}
+
+.testimonios-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.testimonios-grid {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .testimonio-card {
@@ -367,6 +413,7 @@ footer {
     flex-direction: column;
     justify-content: space-between;
     transition: transform 0.3s ease;
+    scroll-snap-align: start;
 }
 
 .testimonio-card:hover {
@@ -943,7 +990,87 @@ footer {
    ========================================================================== */
 
 @media (max-width: 768px) {
-    /* Ajustes generales y de formularios */
+    /* --- Navegación --- */
+    .menu-toggle {
+        display: block; /* Mostramos el botón */
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 80px; /* Justo debajo del nav */
+        left: 0;
+        width: 100%;
+        background-color: var(--blanco);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        text-align: center;
+        gap: 15px;
+
+        /* --- Magia para el efecto suave --- */
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        visibility: hidden;
+        padding: 0;
+        transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease, visibility 0.4s;
+    }
+
+    .nav-links.mostrar {
+        max-height: 400px; /* Altura suficiente para mostrar */
+        opacity: 1;
+        visibility: visible;
+        padding: 20px 0;
+    }
+
+    /* --- General y Textos --- */
+    .hero-titulo {
+        font-size: 2.2rem;
+    }
+
+    .titulo-seccion span {
+        font-size: 1.5rem;
+    }
+
+    .titulo-pagina {
+        font-size: 2rem;
+    }
+
+    /* --- Ajustes de Secciones y Grillas --- */
+    .calculadora-grid,
+    .nosotros-grid,
+    .educacion-grid {
+        flex-direction: column;
+    }
+
+    .caja-simulador, .caja-beneficios {
+        width: 100%;
+    }
+
+    /* --- Carrusel Testimonios (Móvil) --- */
+    .testimonios-grid {
+        display: flex; /* Cambiamos a flex para que no se trabe */
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch; /* Habilita el arrastre fluido con el dedo en iOS/Android */
+        gap: 20px;
+        padding-bottom: 20px;
+        scrollbar-width: none; /* Oculta la barrita de scroll en Firefox */
+    }
+
+    .testimonios-grid::-webkit-scrollbar {
+        display: none; /* Oculta la barrita de scroll en Chrome/Safari */
+    }
+
+    .testimonio-card {
+        flex: 0 0 85vw; /* Cada tarjeta ocupa el 85% del ancho de la pantalla */
+        scroll-snap-align: center; /* Hace un efecto imán en el centro al deslizar */
+        box-sizing: border-box; /* <--- Esta es la línea mágica que centra */
+        padding: 30px 15px; /* Achicamos un pelín el relleno lateral para que el texto respire mejor en móviles */
+    }
+
+    /* --- Formularios --- */
     .form-grid {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -956,10 +1083,27 @@ footer {
     .banner-beneficios {
         flex-direction: column;
         align-items: center;
+        text-align: center;
     }
 
     /* Ajustes específicos de Contacto */
     .contacto-grid {
         grid-template-columns: 1fr;
+    }
+
+    /* --- Ajuste Calculadora Móvil --- */
+    .caja-simulador {
+        min-width: 100%; /* Le saca el bloqueo de los 300px */
+        padding: 30px 15px; /* Menos relleno a los costados */
+        box-sizing: border-box; /* Obliga a que el padding no sume ancho extra */
+    }
+
+    .botones-opciones {
+        flex-wrap: wrap; /* Si la pantalla es muy muy chica, los botones bajan de línea */
+    }
+
+    .btn-opcion {
+        padding: 10px 5px;
+        font-size: 0.9rem; /* Letra penitas más chica */
     }
 }

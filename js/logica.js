@@ -58,6 +58,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 6. INICIAR FORMULARIO REFERIDOS (referidos.html)
     inicializarFormularioReferidos();
+
+    // INICIAR MENÚ MÓVIL
+    inicializarMenuMovil();
+
+    // INICIAR CARRUSEL AUTOMÁTICO (index.html)
+    inicializarCarrusel();
 });
 
 /* --- LÓGICA DE LA CALCULADORA --- */
@@ -281,11 +287,11 @@ DATOS CREDITICIOS:
 
 /* --- LÓGICA FORMULARIO DE REFERIDOS (Formspree) --- */
 function inicializarFormularioReferidos() {
+
     // Buscamos el formulario. Como usa la misma clase CSS que préstamos,
     // lo diferenciamos buscando un ID único de esta página ('dni-referente').
     const formReferidos = document.querySelector('.seccion-formulario form.formulario-prestamo');
     const inputDniReferente = document.getElementById('dni-referente');
-
     if (!formReferidos || !inputDniReferente) return; // Si no estamos en Referidos, frena acá.
 
     formReferidos.addEventListener('submit', async (e) => {
@@ -349,6 +355,57 @@ DATOS DEL INTERESADO (Nuevo cliente referido):
             boton.disabled = false;
         }
     });
+}
+
+/* --- LÓGICA DEL MENÚ MÓVIL --- */
+function inicializarMenuMovil() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (!menuToggle || !navLinks) return;
+
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('mostrar');
+        // Cambiar el ícono de barras a 'X'
+        const icono = menuToggle.querySelector('i');
+        if (navLinks.classList.contains('mostrar')) {
+            icono.classList.remove('fa-bars');
+            icono.classList.add('fa-xmark');
+        } else {
+            icono.classList.remove('fa-xmark');
+            icono.classList.add('fa-bars');
+        }
+    });
+}
+
+/* --- LÓGICA DEL CARRUSEL AUTOMÁTICO --- */
+function inicializarCarrusel() {
+    const carrusel = document.querySelector('.testimonios-grid');
+    if (!carrusel) return;
+
+    let scrollAmount = 0;
+
+    // Gira solo cada 4 segundos
+    setInterval(() => {
+        // Solo ejecuta el giro automático si estamos en un celular (menor a 768px)
+        if (window.innerWidth <= 768) {
+            // Calcula el ancho de la tarjeta + el espacio (gap)
+            const cardWidth = carrusel.querySelector('.testimonio-card').offsetWidth + 20;
+            scrollAmount += cardWidth;
+
+            // Si llegamos al final, volvemos a la primera tarjeta
+            if (scrollAmount >= carrusel.scrollWidth - carrusel.offsetWidth) {
+                scrollAmount = 0;
+            }
+
+            // Mueve el carrusel suavemente
+            carrusel.scrollTo({
+                top: 0,
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    }, 4000); // 4000 = 4 segundos
 }
 
 
