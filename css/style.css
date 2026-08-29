@@ -1106,4 +1106,10 @@ footer {
         padding: 10px 5px;
         font-size: 0.9rem; /* Letra penitas más chica */
     }
+
+    /* --- Arreglo del fondo en Celulares --- */
+    .cabecera-pagina {
+        background-attachment: scroll; /* Desactiva el parallax y arregla el súper zoom */
+        background-position: center center;
+    }
 }
