@@ -10,6 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
         anioSpan.textContent = new Date().getFullYear();
     }
 
+    const aniosExperiencia = new Date().getFullYear() - MAYCOOP_DATOS.anioFundacion;
+
     const inyectarDato = (clase, valor) => {
         document.querySelectorAll(clase).forEach(elemento => {
             elemento.textContent = valor;
@@ -24,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         inyectarDato('.dato-direccion', MAYCOOP_DATOS.direccionCABA);
         inyectarDato('.dato-socios', MAYCOOP_DATOS.totalSocios);
         inyectarDato('.dato-creditos', MAYCOOP_DATOS.totalCreditos);
+        inyectarDato('.dato-anios', aniosExperiencia);
 
         // Genera links automáticos para los íconos de WhatsApp
         const numeroLimpio = "549" + MAYCOOP_DATOS.telComercial.replace(/\D/g, "");
